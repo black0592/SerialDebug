@@ -1,0 +1,505 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\SerialDebug.rc2""  // ·? Microsoft Visual C++ ±à?-μ?×ê?′\r\n"
+    "#include ""l.CHS\\afxres.rc""      // ±ê×?×é?t\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res\\bluenochange.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 222, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_ICON1,IDC_STATIC,21,20,20,20
+    LTEXT           "雪莉蓝串口调试助手 V1.3.0 版",IDC_STATIC,51,17,150,8,SS_NOPREFIX
+    LTEXT           "作者：BLUENOCHANGE（蓝蜻蜓）",IDC_STATIC,59,30,113,9
+    DEFPUSHBUTTON   "确定",IDOK,86,99,48,14,WS_GROUP
+    LTEXT           "Email: soft@sherryblue.org",IDC_STATIC,65,87,89,9
+    LTEXT           "Copy Right： 雪莉蓝技术",IDC_STATIC,19,58,107,9
+    CONTROL         "<a>http://tech.sherryblue.org</a>",IDC_SYSLINK1,"SysLink",WS_TABSTOP,66,75,90,8
+    CONTROL         "<a>版本新特性</a>",IDC_SYSLINK10,"SysLink",WS_TABSTOP,164,58,36,8
+    LTEXT           "SHERRY（兔兔）",IDC_STATIC,89,42,54,8
+END
+
+IDD_SERIALDEBUG_DIALOG DIALOGEX 0, 0, 392, 423
+STYLE DS_ABSALIGN | DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT | WS_EX_APPWINDOW
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "打开串口",IDC_BUTTON_OPEN,15,140,86,14
+    EDITTEXT        IDC_EDIT_RESV,113,76,271,217,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    COMBOBOX        IDC_COMBO_PORT,9,21,373,15,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "端口设置",IDC_STATIC,9,35,98,125
+    COMBOBOX        IDC_COMBO_BAUDRATE,47,59,54,88,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "波特率",IDC_STATIC,20,61,22,10
+    LTEXT           "校验位",IDC_STATIC,20,77,22,11
+    COMBOBOX        IDC_COMBO_PARITY,47,75,54,14,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "数据位",IDC_STATIC,20,94,22,11
+    COMBOBOX        IDC_COMBO_DATA,47,92,54,14,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "停止位",IDC_STATIC,20,110,22,12
+    COMBOBOX        IDC_COMBO_STOP,47,108,54,14,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SPLITTER1,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,112,295,272,2
+    EDITTEXT        IDC_EDIT_SEND,112,300,219,69,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL,WS_EX_ACCEPTFILES
+    GROUPBOX        "接受区设置",IDC_STATIC,9,207,98,72
+    DEFPUSHBUTTON   "发送CTRL+ENTER",IDC_BUTTON_SEND,334,300,50,83,BS_MULTILINE | WS_DISABLED
+    CONTROL         "<a>清空接收缓冲</a>",IDC_SYSLINK_CLEAROUT,"SysLink",WS_TABSTOP,59,267,45,11
+    CONTROL         "暂停接受显示",IDC_CHECK_STOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,257,60,10
+    CONTROL         "十六进制显示",IDC_CHECK_HEXOUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,247,58,10
+    CONTROL         "标准波特率",IDC_CHECK_BORTRATE_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,46,53,10
+    EDITTEXT        IDC_EDIT_BORTRATE,47,60,54,12,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "发送区设置",IDC_STATIC,9,279,97,121
+    CONTROL         "<a>清空发送缓冲</a>",IDC_SYSLINK1,"SysLink",WS_TABSTOP,60,387,42,9
+    CONTROL         "十六进制输入",IDC_CHECK_SENDHEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,334,57,10
+    CONTROL         "自动循环发送",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,345,57,10
+    CONTROL         "自动发送附加位...",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,323,71,10
+    GROUPBOX        "多机通讯功能设置",IDC_STATIC,9,162,97,45
+    COMBOBOX        IDC_COMBO_MULTIHOST_MODE,35,174,66,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "方式",IDC_STATIC,15,176,15,8
+    EDITTEXT        IDC_EDIT_ADDDEC,47,189,19,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "地址  DEC",IDC_STATIC,15,191,32,8
+    LTEXT           "HEX",IDC_STATIC,68,191,14,8
+    EDITTEXT        IDC_EDIT_ADDHEX,82,189,19,14,ES_UPPERCASE | ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "发送完自动清空",IDC_CHECK_CLEAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,312,60,10
+    EDITTEXT        IDC_EDIT_SENDCON,110,404,72,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "<a>发送计数复位</a>",IDC_SYSLINK2,"SysLink",WS_TABSTOP,196,406,43,9
+    EDITTEXT        IDC_EDIT3,253,404,60,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "<a>接收计数复位</a>",IDC_SYSLINK4,"SysLink",WS_TABSTOP,327,406,46,8
+    CONTROL         "<a>全部计数复位</a>",IDC_SYSLINK5,"SysLink",WS_TABSTOP,57,406,42,8
+    CONTROL         "自动换行显示",IDC_CHECK_AUTOENTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,236,57,10
+    CONTROL         "启用文件数据源...",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,291,71,10
+    CONTROL         "接收另存为文件...",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,218,71,10
+    CONTROL         "<a>打开文件</a>",IDC_SYSLINK3,"SysLink",WS_TABSTOP,21,302,28,8
+    CONTROL         "<a>打开文件夹</a>",IDC_SYSLINK6,"SysLink",WS_TABSTOP,54,302,36,8
+    CONTROL         "<a>打开文件</a>",IDC_SYSLINK7,"SysLink",WS_TABSTOP,20,228,30,9
+    CONTROL         "<a>打开文件夹</a>",IDC_SYSLINK8,"SysLink",WS_TABSTOP,54,228,35,8
+    EDITTEXT        IDC_EDIT_LOOPTIME,50,372,22,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "循环时间",IDC_STATIC,22,373,28,8
+    LTEXT           "*100ms",IDC_STATIC,75,373,26,8
+    CONTROL         "",IDC_RICHEDIT21,"RichEdit20W",ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | WS_TABSTOP,113,40,271,17,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT2,220,370,110,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "NONE",IDC_STATIC_ADD,113,372,70,8
+    CONTROL         "1.CD",IDC_CHECK_CD,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,114,61,27,10
+    CONTROL         "4.DTR",IDC_CHECK_DTR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,61,29,10
+    CONTROL         "6.DSR",IDC_CHECK_DSR,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,263,61,31,10
+    CONTROL         "7.RTS",IDC_CHECK_RTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,293,61,29,10
+    CONTROL         "8.CTS",IDC_CHECK_CTS,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,323,61,30,10
+    CONTROL         "9.RI",IDC_CHECK_RI,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,353,61,25,10
+    CONTROL         "2.RXD",IDC_CHECK8,"Button",BS_AUTO3STATE | WS_DISABLED | WS_TABSTOP,140,61,30,10
+    CONTROL         "3.TXD",IDC_CHECK9,"Button",BS_AUTO3STATE | WS_DISABLED | WS_TABSTOP,169,61,30,10
+    CONTROL         "5.GND",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,232,61,31,10
+    CONTROL         "不占用时自动打开",IDC_CHECK_AUTOOPEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,125,71,10
+    PUSHBUTTON      "Button2",IDC_BUTTON2,12,406,32,9,NOT WS_VISIBLE
+    PUSHBUTTON      "API发送",IDC_BTN_APISEND,335,385,49,14
+END
+
+IDD_ADDBYTES DIALOGEX 0, 0, 227, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "附加位设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,91,55,50,14
+    COMBOBOX        IDC_COMBO_ADDTYPE,94,18,114,30,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "附加字节类型设置",IDC_STATIC,21,20,65,8
+    EDITTEXT        IDC_EDIT_DEFINEDEC,107,36,22,14,ES_AUTOHSCROLL
+    LTEXT           "自定义字节",IDC_STATIC3,41,39,41,8
+    EDITTEXT        IDC_EDIT_DEFINEHEX,151,36,22,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "DEC",IDC_STATIC2,89,39,14,8
+    LTEXT           "HEX",IDC_STATIC1,134,39,14,8
+END
+
+IDD_SETTING_DIALOG DIALOGEX 0, 0, 271, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "软件设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,154,108,50,14
+    PUSHBUTTON      "取消",IDCANCEL,207,109,50,14
+    CONTROL         "退出时最小化到托盘",IDC_CHECK_TRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,79,38,88,10
+    CONTROL         "按关闭按钮时提醒我",IDC_CHECK_ACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,79,54,88,10
+    CONTROL         "默认窗口置顶",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,79,70,81,10
+END
+
+IDD_CLOSE_SETTING DIALOGEX 0, 0, 271, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关闭设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,103,108,50,14
+    PUSHBUTTON      "最小化",IDC_MINI,155,108,50,14
+    LTEXT           "是否真的要关闭程序？“退出”关闭软件，“最小化”最小化程序到托盘",IDC_STATIC,18,38,236,8
+    CONTROL         "记住我的设置",IDC_CHECK_SAVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,64,64,10
+    PUSHBUTTON      "取消",IDCANCEL,207,109,50,14
+END
+
+IDD_SDNEWVERSION_DIALOG DIALOGEX 0, 0, 271, 138
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "升级检测"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,154,110,50,14
+    PUSHBUTTON      "取消",IDCANCEL,207,110,50,14
+    PUSHBUTTON      "检测是否新版",IDC_CHECK_IFNEW,102,49,62,14
+    EDITTEXT        IDC_EDIT,83,26,106,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_INFO DIALOGEX 0, 0, 220, 105
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,4,3,211,83,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "<a>复制文本</a>",IDC_SYSLINK1,"SysLink",WS_TABSTOP,172,89,33,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,3,0,0
+ PRODUCTVERSION 1,3,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "soft@sherryblue.org"
+            VALUE "CompanyName", "雪莉蓝"
+            VALUE "FileDescription", "雪莉蓝串口调试助手"
+            VALUE "FileVersion", "1.3.0.0"
+            VALUE "InternalName", "SerialDebug.exe"
+            VALUE "LegalCopyright", "雪莉蓝"
+            VALUE "OriginalFilename", "SerialDebug.exe"
+            VALUE "ProductName", "雪莉蓝串口调试助手"
+            VALUE "ProductVersion", "1.3.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_SERIALDEBUG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 384
+        TOPMARGIN, 15
+        BOTTOMMARGIN, 420
+    END
+
+    IDD_ADDBYTES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_SETTING_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_CLOSE_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_SDNEWVERSION_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SERIALDEBUG_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3131, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3033, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3036, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3431, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3635, 0x3030, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3231, 0x3038, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3532, 0x3036, 0x3030, "\000" 
+    IDC_COMBO_PARITY, 0x403, 7, 0
+0xdece, 0xa3d0, 0xe9d1, "\000" 
+    IDC_COMBO_PARITY, 0x403, 7, 0
+0xe6c6, 0xa3d0, 0xe9d1, "\000" 
+    IDC_COMBO_PARITY, 0x403, 7, 0
+0xbcc5, 0xa3d0, 0xe9d1, "\000" 
+    IDC_COMBO_PARITY, 0x403, 7, 0
+0x3120, 0xa3d0, 0xe9d1, "\000" 
+    IDC_COMBO_PARITY, 0x403, 7, 0
+0x3020, 0xa3d0, 0xe9d1, "\000" 
+    IDC_COMBO_DATA, 0x403, 4, 0
+0xce34, 0x00bb, 
+    IDC_COMBO_DATA, 0x403, 4, 0
+0xce35, 0x00bb, 
+    IDC_COMBO_DATA, 0x403, 4, 0
+0xce36, 0x00bb, 
+    IDC_COMBO_DATA, 0x403, 4, 0
+0xce37, 0x00bb, 
+    IDC_COMBO_DATA, 0x403, 4, 0
+0xce38, 0x00bb, 
+    IDC_COMBO_STOP, 0x403, 4, 0
+0xce31, 0x00bb, 
+    IDC_COMBO_STOP, 0x403, 6, 0
+0x2e31, 0xce35, 0x00bb, 
+    IDC_COMBO_STOP, 0x403, 4, 0
+0xce32, 0x00bb, 
+    IDC_COMBO_MULTIHOST_MODE, 0x403, 15, 0
+0xe0b6, 0xfabb, 0xa8cd, 0xb6d1, 0xa6b9, 0xdcc4, 0xd8b9, "\000" 
+    IDC_COMBO_MULTIHOST_MODE, 0x403, 15, 0
+0xd4d7, 0xafb6, 0xbdb8, 0xd3bc, 0xd8b5, 0xb7d6, 0xebc2, "\000" 
+    0
+END
+
+IDD_ADDBYTES DLGINIT
+BEGIN
+    IDC_COMBO_ADDTYPE, 0x403, 11, 0
+0x5243, 0xbb28, 0xb3d8, 0xb7b5, 0x29fb, "\000" 
+    IDC_COMBO_ADDTYPE, 0x403, 11, 0
+0x464c, 0xbb28, 0xd0bb, 0xb7d0, 0x29fb, "\000" 
+    IDC_COMBO_ADDTYPE, 0x403, 5, 0
+0x5243, 0x464c, "\000" 
+    IDC_COMBO_ADDTYPE, 0x403, 11, 0
+0xcec8, 0xe2d2, 0xa5b5, 0xd6d7, 0xdabd, "\000" 
+    IDC_COMBO_ADDTYPE, 0x403, 10, 0
+0xce38, 0xd0bb, 0xd1a3, 0xbae9, 0x00cd, 
+    IDC_COMBO_ADDTYPE, 0x403, 11, 0
+0x3631, 0xbbce, 0xa3d0, 0xe9d1, 0xcdba, "\000" 
+    IDC_COMBO_ADDTYPE, 0x403, 22, 0
+0x5243, 0x3143, 0x2836, 0x3038, 0x3530, 0x2948, 0x282d, 0x4f4d, 0x4244, 
+0x5355, 0x0029, 
+    IDC_COMBO_ADDTYPE, 0x403, 19, 0
+0x5243, 0x3143, 0x2836, 0x3031, 0x3132, 0x2948, 0x282d, 0x5449, 0x2955, 
+"\000" 
+    IDC_COMBO_ADDTYPE, 0x403, 17, 0
+0x5243, 0x3343, 0x2832, 0x3430, 0x3143, 0x4431, 0x3742, 0x2948, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TRAY MENU
+BEGIN
+    POPUP "托盘菜单"
+    BEGIN
+        MENUITEM "打开主窗口",                       IDR_TRAY_RESTORE
+        MENUITEM "设置..",                        IDR_TRAY_SETTING
+        POPUP "串口管理"
+        BEGIN
+            MENUITEM "Windows设备管理器",                IDR_WINMANAGER1
+        END
+        MENUITEM "串口百科",                        ID_32779
+        MENUITEM "检查新版本..",                     IDR_NEWVERSION
+        MENUITEM "退出",                          IDR_TRAY_EXIT
+        MENUITEM "关于..",                        IDR_ABOUT
+    END
+END
+
+IDR_MENU_SYS MENU
+BEGIN
+    POPUP "系统菜单"
+    BEGIN
+        MENUITEM "保持窗口最前",                      IDR_TOPMOST
+        MENUITEM "设置...",                       IDR_TRAY_SETTING
+        POPUP "串口管理"
+        BEGIN
+            MENUITEM "Windows设备管理器",                IDR_WINMANAGER1
+        END
+        MENUITEM "串口百科",                        ID_32785
+        MENUITEM "检查新版本",                       IDR_NEWVERSION
+        MENUITEM "关于...",                       IDR_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_EXIT_NORMAL         BITMAP                  "res\\close.bmp"
+IDB_MAX_NORMAL          BITMAP                  "res\\max.bmp"
+IDB_MIN_NORMAL          BITMAP                  "res\\min.bmp"
+IDB_RESTORE_NORMAL      BITMAP                  "res\\restore.bmp"
+IDB_HELP_NORMAL         BITMAP                  "res\\help.bmp"
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 SerialDebug..."
+    IDS_FORMERBOX           "保持窗口最前"
+    IDS_SETTINGBOX          "设置..."
+    IDS_NEWVERSION          "升级新版本"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\SerialDebug.rc2"  // ·? Microsoft Visual C++ ±à?-μ?×ê?′
+#include "l.CHS\afxres.rc"      // ±ê×?×é?t
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

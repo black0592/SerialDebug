@@ -1,0 +1,16 @@
+*.sdf
+*.obj
+*.tlog
+/ipch
+/_UpgradeReport_Files
+*.pch
+*.log
+*.pdb
+*.exe
+*.sbr
+*.dll
+*.psd
+*.lib
+*.exp
+*.bsc
+*.res

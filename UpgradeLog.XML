@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SerialDebug">
+</Property><Property Name="解决方案文件" Value="J:\程序\VS2008\HARDWARE\SerialDebug\SerialDebug.sln">
+</Property><Property Name="用户选项文件" Value="J:\程序\VS2008\HARDWARE\SerialDebug\SerialDebug.suo">
+</Property><Property Name="Date" Value="2011年3月24日">
+</Property><Property Name="Time" Value="10:17">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SerialDebug.sln" Description="文件已成功备份为 J:\程序\VS2008\HARDWARE\SerialDebug\SerialDebug.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="SerialDebug.suo" Description="文件已成功备份为 J:\程序\VS2008\HARDWARE\SerialDebug\SerialDebug.suo.old">
+</Event><Event ErrorLevel="0" Project="SerialDebug" Source="SerialDebug\SerialDebug.vcproj" Description="Converting project file 'J:\程序\VS2008\HARDWARE\SerialDebug\SerialDebug\SerialDebug.vcproj'.">
+</Event><Event ErrorLevel="1" Project="SerialDebug" Source="SerialDebug\SerialDebug.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="SerialDebug" Source="SerialDebug\SerialDebug.vcproj" Description="Done converting to new project file 'J:\程序\VS2008\HARDWARE\SerialDebug\SerialDebug\SerialDebug.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="SerialDebug" Source="SerialDebug\SerialDebug.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SerialDebug.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="SerialDebug.sln" Description="Converted">
+</Event></UpgradeLog>
