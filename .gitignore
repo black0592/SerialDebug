@@ -16,3 +16,6 @@
 *.res
 *.ilk
 *.idb
+/Release_ONE
+/SerialDebug/Release_ONE
+/OpenDev/Debug
