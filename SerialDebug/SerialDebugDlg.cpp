@@ -343,6 +343,7 @@ BOOL CSerialDebugDlg::OnInitDialog()
 	looptime = 1;
 	manual = false;
 	timer = 100;
+	mTimer = NULL;
 
 	MEditAddDec.SetAllowedString(L"0123456789");
 	MEditAddDec.SetLimitText(3);
@@ -1950,9 +1951,9 @@ void ThreadSend(CSerialDebugDlg * pClass)
 				pClass->edSendCount.SetWindowText((LPCTSTR)(temp3));
 				pClass->writenow = false;
 				pClass->hasapidata = false;
-				delete pClass->SeialCallback.lpBuffer;
-				if (pClass->SeialCallback.bRepeat){
-					pClass->APIDataload();
+				//delete pClass->SeialCallback.lpBuffer;
+				if (pClass->SeialCallback.bRepeat != -1){
+					pClass->APIDelayLoad();
 				}
 				else{
 					pClass->btnAPISend.SetWindowText(L"API发送");
@@ -2486,6 +2487,14 @@ void CSerialDebugDlg::OnTimer(UINT_PTR nIDEvent)
 		InfoDlg.ShowWindow(SW_SHOW);
 		CDialog::OnTimer(nIDEvent);
 		break;
+	case 3: //API定时调用寄存器
+		//InfoDlg.ShowWindow(SW_SHOW);
+		APIDataload();
+		CDialog::OnTimer(nIDEvent);
+		if (mTimer){
+			KillTimer(mTimer);
+			mTimer = NULL;
+		}
 	default:
 		CDialog::OnTimer(nIDEvent);
 		break;
@@ -3215,6 +3224,10 @@ void CSerialDebugDlg::OnBnClickedBtnApisend()
 	else{
 		hasapidata = false;
 		writenow = false;
+		if (mTimer){
+			KillTimer(mTimer);
+			mTimer = NULL;
+		}
 		btnAPISend.SetWindowText(L"API发送");
 	}
 
@@ -3237,7 +3250,22 @@ void CSerialDebugDlg::APIDataload()
 
 	if (SeialCallback.dwLength){
 		hasapidata = true;
-		writenow = true;
+		writenow = true;		
+	}
+	else{
+		hasapidata = false;
+		writenow = false;
+		if (mTimer){
+			KillTimer(mTimer);
+			mTimer = NULL;
+		}
+		btnAPISend.SetWindowText(L"API发送");
 	}
 
+}
+
+
+void CSerialDebugDlg::APIDelayLoad()
+{
+	mTimer = SetTimer(3, SeialCallback.bRepeat, 0);	
 }

@@ -66,6 +66,7 @@ public:
 	bool hasapidata;
 	HINSTANCE hDllInst;
 	CButton btnAPISend;
+	UINT_PTR mTimer;
 	/*API∑¢ÀÕ”√Ω· ¯*/
 
 
@@ -221,4 +222,5 @@ public:
 	CButton chkAutoOpen;
 	afx_msg void OnBnClickedBtnApisend();
 	void APIDataload();
+	void APIDelayLoad();
 };

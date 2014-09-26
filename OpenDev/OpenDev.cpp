@@ -31,11 +31,11 @@ extern "C" _declspec (dllexport) void SerialCallback(LPSERIALCALLBACK lpSerialCa
 	lpSerialCallback->lpBuffer = toSend;
 	lpSerialCallback->dwLength = 1024;
 	if (lpSerialUserData->i<2){
-		lpSerialCallback->bRepeat = true;
+		lpSerialCallback->bRepeat = 1000;
 		lpSerialUserData->i++;
 	}
 	else{
-		lpSerialCallback->bRepeat = false;
+		lpSerialCallback->bRepeat = -1;
 	}
 	
 
